@@ -1,0 +1,10 @@
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.Entidades\bin\Debug\ABB.Catalogo.Entidades.dll
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.Entidades\bin\Debug\ABB.Catalogo.Entidades.pdb
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.Entidades\obj\Debug\ABB.Catalogo.Entidades.csprojAssemblyReference.cache
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.Entidades\obj\Debug\ABB.Catalogo.Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.Entidades\obj\Debug\ABB.Catalogo.Entidades.dll
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.Entidades\obj\Debug\ABB.Catalogo.Entidades.pdb
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.Entidades\bin\Debug\log4net.dll
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.Entidades\bin\Debug\System.Web.Mvc.dll
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.Entidades\bin\Debug\System.Web.WebPages.dll
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.Entidades\obj\Debug\ABB.Catalogo.Entidades.csproj.CopyComplete

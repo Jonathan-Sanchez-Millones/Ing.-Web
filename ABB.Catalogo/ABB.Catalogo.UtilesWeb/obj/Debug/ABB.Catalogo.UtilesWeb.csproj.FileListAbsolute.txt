@@ -1,0 +1,6 @@
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.UtilesWeb\bin\Debug\ABB.Catalogo.UtilesWeb.dll
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.UtilesWeb\bin\Debug\ABB.Catalogo.UtilesWeb.pdb
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.UtilesWeb\obj\Debug\ABB.Catalogo.UtilesWeb.csprojAssemblyReference.cache
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.UtilesWeb\obj\Debug\ABB.Catalogo.UtilesWeb.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.UtilesWeb\obj\Debug\ABB.Catalogo.UtilesWeb.dll
+C:\Users\Jonathan\Desktop\2020\2020-II\Ingenieria-Web\Abb Catalogo\ABB.Catalogo\ABB.Catalogo.UtilesWeb\obj\Debug\ABB.Catalogo.UtilesWeb.pdb
