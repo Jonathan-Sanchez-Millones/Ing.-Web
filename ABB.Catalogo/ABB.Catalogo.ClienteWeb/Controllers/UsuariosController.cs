@@ -51,16 +51,35 @@ namespace ABB.Catalogo.ClienteWeb.Controllers
         // GET: Usuarios/Create
         public ActionResult Create()
         {
-            return View();
+            Usuarios usuario = new Usuarios();// se crea una instancia de la clase usuario
+            List<Rol> listarol = new List<Rol>();
+            listarol = new RolLN().ListaRol();
+            listarol.Add(new Rol() { IdRol = 0, DesRol = "[Seleccione Rol...]" });
+            ViewBag.listaRoles = listarol;
+
+            return View(usuario);
         }
 
         // POST: Usuarios/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Usuarios collection)
         {
+            string controladora = "Usuarios";
             try
             {
                 // TODO: Add insert logic here
+                using (WebClient usuario = new WebClient())
+                {
+                    usuario.Headers.Clear();//borra datos anteriores
+                    //establece el tipo de dato de tranferencia
+                    usuario.Headers[HttpRequestHeader.ContentType] = jsonMediaType;
+                    //typo de decodificador reconocimiento carecteres especiales
+                    usuario.Encoding = UTF8Encoding.UTF8;
+                    //convierte el objeto de tipo Usuarios a una trama Json
+                    var usuarioJson = JsonConvert.SerializeObject(collection);
+                    string rutacompleta = RutaApi + controladora;
+                    var resultado = usuario.UploadString(new Uri(rutacompleta), usuarioJson);
+                }
 
                 return RedirectToAction("Index");
             }
@@ -68,6 +87,7 @@ namespace ABB.Catalogo.ClienteWeb.Controllers
             {
                 return View();
             }
+
         }
 
         // GET: Usuarios/Edit/5
