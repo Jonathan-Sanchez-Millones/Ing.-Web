@@ -146,10 +146,10 @@ namespace ABB.Catalogo.AccesoDatos.Core
 
         public Usuarios ModificarUsuario(int IdUsuario, Usuarios usuario)
         {
-            Usuarios SegSSOMUsuario = null;
-            byte[] UserPass = EncriptacionHelper.EncriptarByte(usuario.ClaveTxt);
-            usuario.Clave = UserPass;
-
+            //Usuarios SegSSOMUsuario = null;
+            //byte[] UserPass = EncriptacionHelper.EncriptarByte(usuario.ClaveTxt);
+            //usuario.Clave = UserPass;
+            
             using (SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings[ConfigurationManager.AppSettings["cnnSql"]].ConnectionString))
             {
 
@@ -158,21 +158,22 @@ namespace ABB.Catalogo.AccesoDatos.Core
                     comando.CommandType = System.Data.CommandType.StoredProcedure;
                     comando.Parameters.AddWithValue("@IdUsuario", IdUsuario);
                     comando.Parameters.AddWithValue("@CodUsuario", usuario.CodUsuario);
-                    comando.Parameters.AddWithValue("@Clave", usuario.Clave);
+                    //comando.Parameters.AddWithValue("@Clave", usuario.Clave);
                     comando.Parameters.AddWithValue("@Nombres", usuario.Nombres);
                     comando.Parameters.AddWithValue("@IdRol", usuario.IdRol);
                     conexion.Open();
                     SqlDataReader reader = comando.ExecuteReader();
-                    while (reader.Read())
-                    {
-                        SegSSOMUsuario = LlenarEntidad(reader);
+                    //while (reader.Read())
+                    //{
+                    //    SegSSOMUsuario = LlenarEntidad(reader);
 
-                    }
+                    //}
 
                     conexion.Close();
                 }
             }
-            return SegSSOMUsuario;
+
+            return usuario;
         }
 
         public int EliminarUsuario(int IdUsuario)
@@ -190,6 +191,42 @@ namespace ABB.Catalogo.AccesoDatos.Core
                 }
             }
             return 1;
+        }
+
+        public Usuarios BuscaUsuarioId(int pUsuarioId)
+        {
+            Usuarios entidad = null;
+            try
+            {
+
+                using (SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings[ConfigurationManager.AppSettings["cnnSql"]].ConnectionString))
+                {
+                    using (SqlCommand comando = new SqlCommand("paUsuario_BuscaUserId", conexion))
+                    {
+                        comando.CommandType = CommandType.StoredProcedure;
+                        comando.Parameters.AddWithValue("@ParamUsuario", pUsuarioId);
+                        conexion.Open();
+                        SqlDataReader reader = comando.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            entidad = LlenarEntidad(reader);
+
+                        }
+                        conexion.Close();
+                    }
+
+                }
+
+                return entidad;
+            }
+            catch (Exception ex)
+            {
+                string innerException = (ex.InnerException == null) ? "" : ex.InnerException.ToString();
+                //Logger.paginaNombre = this.GetType().Name;
+                //Logger.Escribir("Error en Logica de Negocio: " + ex.Message + ". " + ex.StackTrace + ". " + innerException);
+                return entidad;
+            }
+
         }
 
 

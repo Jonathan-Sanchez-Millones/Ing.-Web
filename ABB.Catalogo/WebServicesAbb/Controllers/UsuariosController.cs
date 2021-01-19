@@ -60,5 +60,24 @@ string innerException = (ex.InnerException == null) ? "" : ex.InnerException.ToS
         {
             int usuario = new UsuariosLN().EliminarUsuario(id);
         }
+
+        public Usuarios GetUserId([FromUri] int IdUsuario)
+        {
+            try
+            {
+                UsuariosLN usuario = new UsuariosLN();
+                return usuario.BuscaUsuarioId(IdUsuario);
+            }
+            catch (Exception ex)
+            {
+                string innerException = (ex.InnerException == null) ? "" : ex.InnerException.ToString();
+                //Logger.paginaNombre = this.GetType().Name;
+                //Logger.Escribir("Error en Logica de Negocio: " + ex.Message + ". " + ex.StackTrace + ". " + innerException);
+                throw;
+            }
+
+
+        }
+
     }
 }
