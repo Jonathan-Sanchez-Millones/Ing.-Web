@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using WebServicesAbb.Filters;
+
 
 namespace WebServicesAbb
 {
@@ -19,6 +21,8 @@ namespace WebServicesAbb
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.MessageHandlers.Add(new FIlterJWT());
         }
     }
 }
